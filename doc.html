@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <style>
+
+    .product-card {
+      height: 685px;
+    }
+
+    .product-card-title {
+      max-height: 225px;
+    }
+
+    .product-card-text {
+      min-height: 378px;
+    }
+
+    .product-card>.mdl-card__title>.card-tile-image>.biggest {
+      font-size: 130px;
+    }
+
+    .product-card>.mdl-card__title>.card-tile-image>.bigger {
+      font-size: 90px;
+    }
+
+    .product-card>.mdl-card__title>.card-tile-image>.big {
+      font-size: 60px;
+    }
+
+
+    .d-flex {
+      display: flex;
+    }
+
+    .justfy-content-end {
+      justify-content: flex-end;
+    }
+
+    .align-items-end {
+      align-items: flex-end;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    .justfy-content-between {
+      justify-content: space-between;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">Cloud Data Service</span>
+      </div>
+    </header>
+
+    <main class="mdl-layout__content">
+      <div class="page-content">
+
+        <!-- Your content goes here -->
+        <div class="mdl-layout mdl-js-layout">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="product-card mdl-card mdl-shadow--2dp">
+                <div
+                  class="mdl-card__title product-card-title mdl-card--expand mdl-color--accent mdl-color-text--accent-contrast justfy-content-between">
+                  <h2 class="mdl-card__title-text">Basic</h2>
+                  <div class="card-tile-image d-flex flex-column align-items-end">
+                    <i class="material-icons big">filter_drama</i>
+                    <i class="material-icons biggest">filter_drama</i>
+                  </div>
+                </div>
+                <div class="mdl-card__supporting-text product-card-text">
+                  <h1 class="text-center">$10</h1>
+
+                  <ul class="demo-list-icon mdl-list">
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">storage</i>
+                        5GB Data
+                      </span>
+                    </li>
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">network_check</i>
+                        8 MBPS
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect">
+                    View Updates
+                  </a>
+                </div>
+              </div>
+
+            </div> <!-- cell -->
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="product-card mdl-card mdl-shadow--2dp">
+                <div
+                  class="mdl-card__title product-card-title mdl-card--expand mdl-color--accent mdl-color-text--accent-contrast justfy-content-between">
+                  <h2 class="mdl-card__title-text">Essential</h2>
+                  <div class="card-tile-image d-flex flex-column align-items-end">
+                    <i class="material-icons big">filter_drama</i>
+                    <i class="material-icons biggest">filter_drama</i>
+                  </div>
+                </div>
+                <div class="mdl-card__supporting-text product-card-text">
+                  <h1 class="text-center">$15</h1>
+
+                  <ul class="demo-list-icon mdl-list">
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">storage</i>
+                        15GB Data
+                      </span>
+                    </li>
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">network_check</i>
+                        20 MBPS
+                      </span>
+                    </li>
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">share</i>
+                        Data Share
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect">
+                    View Updates
+                  </a>
+                </div>
+              </div>
+
+            </div> <!-- cell -->
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="product-card mdl-card mdl-shadow--2dp">
+                <div
+                  class="mdl-card__title product-card-title mdl-card--expand mdl-color--accent mdl-color-text--accent-contrast justfy-content-between">
+                  <h2 class="mdl-card__title-text">Premium</h2>
+                  <div class="card-tile-image d-flex flex-column align-items-end">
+                    <i class="material-icons big">filter_drama</i>
+                    <i class="material-icons biggest">filter_drama</i>
+                  </div>
+                </div>
+                <div class="mdl-card__supporting-text product-card-text">
+                  <h1 class="text-center">$30</h1>
+
+                  <ul class="demo-list-icon mdl-list">
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">storage</i>
+                        50GB Data
+                      </span>
+                    </li>
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">network_check</i>
+                        80 MBPS
+                      </span>
+                    </li>
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">share</i>
+                        Data Share
+                      </span>
+                    </li>
+                    <li class="mdl-list__item">
+                      <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-icon">insights</i>
+                        Data Analysis
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                  <a class="mdl-button mdl-button--primary mdl-js-button mdl-js-ripple-effect">
+                    View Updates
+                  </a>
+                </div>
+              </div>
+
+            </div> <!-- cell -->
+          </div> <!-- mdl grid -->
+        </div> <!-- mdl layout-->
+
+      </div> <!-- page content-->
+
+    </main>
+  </div>
+
+</body>
+
+</html>
