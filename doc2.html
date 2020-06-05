@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="bootstrap-materia.min.css" />
     <link rel="stylesheet" href="style-d2.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -25,7 +26,7 @@
     ></script>
   </head>
 
-  <body>
+  <body class="bg-dim">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary-700">
       <a class="navbar-brand">Cloud Data Service</a>
     </nav>
@@ -33,85 +34,106 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3">
         <div class="col">
-
-          <div class="card mt-3">
-            <div class="m-color--teal-400 m-color-text--white">
+          <div id="idCardBasic" class="card mt-3 h-100 p-card bg-primary-600">
+            <div class="bg-primary-600 p-card-header">
               <div class="d-flex flex-column align-items-end px-3 pb-1 pt-3">
                 <i class="material-icons md-48">filter_drama</i>
                 <i class="material-icons md-96">filter_drama</i>
               </div>
               <h4 class="card-title px-3 py-1 big-text font-weight-normal">Basic</h4>
             </div>
-            <div class="card-body text-primary-700">
+            <div class="card-body text-primary-700 bg-white border-radius-top">
               <h1 class="text-center biggest-text py-3">$10</h1>
 
               <ul class="list-group font-weight-normal">
-                <li class="list-group-item px-2 border-0 d-flex align-items-center">
+                <li class="list-group-item list-item-style">
                   <i class="material-icons mr-3">storage</i>
-                  <span class="big-text">5GB Data</span>
+                  <span class="list-item-text">5GB Data</span>
                 </li>
-                <li class="list-group-item px-2 border-0 d-flex align-items-center">
+                <li class="list-group-item list-item-style">
                   <i class="material-icons mr-3">network_check</i>
-                  <span class="big-text">8 MBPS</span>
+                  <span class="list-item-text">8 MBPS</span>
                 </li>
               </ul>
             </div>
+            <div class="d-flex justify-content-center bg-white p-card-footer">
+              <button type="button" class="btn-fab bg-accent-500 mb-3">
+                <i class="material-icons">add_shopping_cart</i>
+              </button>
+            </div>
           </div>
-
         </div>
         <div class="col">
-
-          <div class="card mt-3">
-            <div class="m-color--teal-400 m-color-text--white">
+          <div class="card mt-3 h-100 p-card bg-primary-600">
+            <div class="bg-primary-600 p-card-header">
               <div class="d-flex flex-column align-items-end px-3 pb-1 pt-3">
                 <i class="material-icons md-48">filter_drama</i>
                 <i class="material-icons md-96">filter_drama</i>
               </div>
-              <h4 class="card-title px-3 py-1 big-text font-weight-normal">Basic</h4>
+              <h4 class="card-title px-3 py-1 big-text font-weight-normal">Essential</h4>
             </div>
-            <div class="card-body text-primary-700">
-              <h1 class="text-center biggest-text py-3">$10</h1>
+            <div class="card-body text-primary-700 bg-white border-radius-top">
+              <h1 class="text-center biggest-text py-3">$15</h1>
 
               <ul class="list-group font-weight-normal">
-                <li class="list-group-item px-2 border-0 d-flex align-items-center">
+                <li class="list-group-item list-item-style">
                   <i class="material-icons mr-3">storage</i>
-                  <span class="big-text">5GB Data</span>
+                  <span class="list-item-text">15GB Data</span>
                 </li>
-                <li class="list-group-item px-2 border-0 d-flex align-items-center">
+                <li class="list-group-item list-item-style">
                   <i class="material-icons mr-3">network_check</i>
-                  <span class="big-text">8 MBPS</span>
+                  <span class="list-item-text">20 MBPS</span>
+                </li>
+                <li class="list-group-item px-2 list-item-style">
+                  <i class="material-icons mr-3">share</i>
+                  <span class="list-item-text">Data Share</span>
                 </li>
               </ul>
             </div>
+            <div class="d-flex justify-content-center bg-white p-card-footer">
+              <button type="button" class="btn-fab bg-accent-500 mb-2">
+                <i class="material-icons">add_shopping_cart</i>
+              </button>
+            </div>
           </div>
-
         </div>
         <div class="col">
-
-          <div class="card mt-3">
-            <div class="m-color--teal-400 m-color-text--white">
+          <div class="card mt-3 h-100 p-card bg-primary-600">
+            <div class="bg-primary-600 p-card-header">
               <div class="d-flex flex-column align-items-end px-3 pb-1 pt-3">
                 <i class="material-icons md-48">filter_drama</i>
                 <i class="material-icons md-96">filter_drama</i>
               </div>
-              <h4 class="card-title px-3 py-1 big-text font-weight-normal">Basic</h4>
+              <h4 class="card-title px-3 py-1 big-text font-weight-normal">Premium</h4>
             </div>
-            <div class="card-body text-primary-700">
-              <h1 class="text-center biggest-text py-3">$10</h1>
+            <div class="card-body text-primary-700 bg-white border-radius-top">
+              <h1 class="text-center biggest-text py-3">$30</h1>
 
               <ul class="list-group font-weight-normal">
-                <li class="list-group-item px-2 border-0 d-flex align-items-center">
+                <li class="list-group-item list-item-style">
                   <i class="material-icons mr-3">storage</i>
-                  <span class="big-text">5GB Data</span>
+                  <span class="list-item-text">50GB Data</span>
                 </li>
-                <li class="list-group-item px-2 border-0 d-flex align-items-center">
+                <li class="list-group-item list-item-style">
                   <i class="material-icons mr-3">network_check</i>
-                  <span class="big-text">8 MBPS</span>
+                  <span class="list-item-text">80 MBPS</span>
+                </li>
+                <li class="list-group-item list-item-style">
+                  <i class="material-icons mr-3">share</i>
+                  <span class="list-item-text">Data Share</span>
+                </li>
+                <li class="list-group-item list-item-style">
+                  <i class="material-icons mr-3">insights</i>
+                  <span class="list-item-text">Data Analysis</span>
                 </li>
               </ul>
             </div>
+            <div class="d-flex justify-content-center bg-white p-card-footer">
+              <button type="button" class="btn-fab bg-accent-500 mb-2">
+                <i class="material-icons">add_shopping_cart</i>
+              </button>
+            </div>
           </div>
-
         </div>
       </div>
     </div>
