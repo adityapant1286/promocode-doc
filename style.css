@@ -1,13 +1,13 @@
 .d-grid {
   display: grid;
   /* grid-gap: 0.25rem; */
+  overflow-x: hidden;
   min-width: 100% !important;
   grid-gap: 1rem !important;
   grid-template-columns: 20% auto 20%;
-  grid-template-areas: 
-  "d-grid-header d-grid-header d-grid-header"
-  "left-sidebar d-grid-content right-sidebar"
-  ;
+  grid-template-areas:
+    "d-grid-header d-grid-header d-grid-header"
+    "left-sidebar d-grid-content right-sidebar";
 }
 
 .d-grid-header {
@@ -58,40 +58,8 @@
 .bg-dim {
   background-color: #ecf0f1 !important;
 }
-/* 
+
 .bg-primary-700 {
-  background-color: #344955 !important;
-  color: #fff !important;
-}
-.bg-primary-800 {
-  background-color: #232f34 !important;
-  color: #fff !important;
-}
-.bg-primary-600 {
-  background-color: #4a6572 !important;
-  color: #fff !important;
-}
-
-.bg-accent-500 {
-  background-color: #f9aa33 !important;
-  color: #232f34 !important;
-}
-
-.text-primary-700 {
-  color: #344955 !important;
-}
-.text-primary-800 {
-  color: #232f34 !important;
-}
-.text-primary-600 {
-  color: #4a6572 !important;
-}
-.text-accent-500 {
-  color: #f9aa33 !important;
-}
- */
-
- .bg-primary-700 {
   background-color: #2a4d69 !important;
   color: #fff !important;
 }
@@ -121,7 +89,6 @@
 .text-accent-500 {
   color: #adcbe3 !important;
 }
-
 
 .material-icons.md-18 {
   font-size: 18px;
@@ -165,12 +132,18 @@ a.undecorated-link:hover {
 }
 
 .m-raised-shadow {
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-                      0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-                      0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-              0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-              0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.badge-http {
+  padding: 0.25rem !important;
+  font-size: small !important;
+  font-weight: normal !important;
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 /* p-card */
@@ -184,12 +157,9 @@ a.undecorated-link:hover {
 }
 
 .p-card:hover {
-  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 
-                      0 8px 10px 1px rgba(0, 0, 0, 0.14),
-                      0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 
-              0 8px 10px 1px rgba(0, 0, 0, 0.14), 
-              0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
 }
 
 .p-card-price {
@@ -220,6 +190,12 @@ li > i {
 .border-radius-top {
   border-top-left-radius: 1.5rem !important;
   border-top-right-radius: 1.5rem !important;
+}
+
+.quoted {
+  border-left: 0.2rem solid #aab5bc;
+  padding: 0.5rem;
+  font-weight: 500;
 }
 
 .btn-fab {
@@ -253,18 +229,15 @@ li > i {
   width: 24px;
 }
 
+#btnSignup {
+  text-transform: capitalize !important;
+  padding: 0.5rem 1rem;
+  font-size: medium !important;
+}
+
 .checkout-fab {
   opacity: 1;
 }
-
-/* .checkout-fab:hover > .material-icons {
-    position: initial;
-    margin-top: 0.5rem;
-    margin-right: 0.25rem;
-    transition: all ease-in-out;
-    font-size: larger;
-    animation: pulse 1s infinite;
-} */
 
 .cp-card-title {
   padding: 1rem 1rem 0 1rem !important;
@@ -278,12 +251,9 @@ li > i {
   background-color: #adcbe3 !important;
   font-size: large !important;
   padding: 0.75rem !important;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-                      0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-                      0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-              0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-              0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .arrow-back {
@@ -298,20 +268,17 @@ li > i {
   /* animation: slideOutLeft 1.2s; */
   border: 1px solid #1f384d;
   border-radius: 50%;
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-  0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-  0 1px 5px 0 rgba(0, 0, 0, 0.12);
-
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-#productContainer, #idNavBar, #checkoutContainer, #signupContainer {  
+.fade-effect {
   animation: fadeIn 1.2s;
 }
 
 /* credit card css */
 
 input.cc-input {
-  font-size: large !important;
+  font-size: medium !important;
   width: 100% !important;
   border: 1px solid #dcdcdc;
   color: #1f384d;
@@ -338,13 +305,9 @@ input.cc-input:focus {
   top: calc(50% - 20px);
   width: 60px;
   border-radius: 0.35rem;
-  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-                      0 2px 2px 0 rgba(0, 0, 0, 0.14),
-                      0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-              0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-              0 1px 5px 0 rgba(0, 0, 0, 0.12);
-
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 /* CREDIT CARD IMAGE STYLING */
@@ -354,14 +317,6 @@ input.cc-input:focus {
   -ms-transition: none !important;
   -o-transition: none !important;
 }
-
-/* .container {
-  width: 100%;
-  max-width: 400px;
-  max-height: 251px;
-  height: 54vw;
-  padding: 20px;
-} */
 
 #ccsingle {
   position: absolute;
@@ -377,12 +332,6 @@ input.cc-input:focus {
 .creditcard svg#cardfront,
 .creditcard svg#cardback {
   width: 100%;
-  /* -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-                      0 2px 2px 0 rgba(0, 0, 0, 0.14),
-                      0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
-              0 2px 2px 0 rgba(0, 0, 0, 0.14), 
-              0 1px 5px 0 rgba(0, 0, 0, 0.12); */
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -394,8 +343,6 @@ input.cc-input:focus {
 #generatecard {
   cursor: pointer;
   font-size: 12px;
-  /* color: #fff; */  
-  /* background-color: #1de9b6 !important; */
   background-color: #adcbe3 !important;
   padding: 2px 4px;
   border-radius: 4px;

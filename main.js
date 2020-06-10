@@ -5,38 +5,45 @@ $(document).ready(() => {
         $('#idNavBar').show();
         $('#productContainer').show();
         $('#homeLeftSidebar').show();
+        $('#homeRightSidebar').show();
 
         $('#arrowBack').hide();
-        $('#checkoutContainer').hide();
         $('#signupContainer').hide();
         $('#signupLeftSidebar').hide();
-        
-        // $('.left-sidebar').hide();
-        // $('.right-sidebar').hide();
+        $('#signupRightSidebar').hide();
+        $('#checkoutContainer').hide();
+        $('#checkoutLeftSidebar').hide();
+        $('#checkoutRightSidebar').hide();        
     };
 
     const showSignUpComponent = () => {
         $('#idNavBar').hide();
         $('#productContainer').hide();
         $('#homeLeftSidebar').hide();
+        $('#homeRightSidebar').hide();
+        $('#checkoutContainer').hide();
+        $('#checkoutLeftSidebar').hide();
+        $('#checkoutRightSidebar').hide();
 
         $('#arrowBack').show();
         $('#signupContainer').show();
         $('#signupLeftSidebar').show();
-
+        $('#signupRightSidebar').show();
     };
 
     const showCheckoutComponents = () => {
-        $('#idNavBar').hide();
-        $('#productContainer').hide();
-        $('#homeLeftSidebar').hide();
+        // $('#idNavBar').hide();
+        // $('#productContainer').hide();
+        // $('#homeLeftSidebar').hide();
         $('#signupContainer').hide();
         $('#signupLeftSidebar').hide();
+        $('#signupLeftSidebar').hide();
+        $('#signupRightSidebar').hide();
 
-        // $('#arrowBack').show();
+        $('#arrowBack').show();
         $('#checkoutContainer').show();
-        // $('.left-sidebar').show();
-        // $('.right-sidebar').show();
+        $('#checkoutLeftSidebar').show();
+        $('#checkoutRightSidebar').show();
     };
 
 
@@ -76,5 +83,10 @@ $(document).ready(() => {
         // showCheckoutComponents();
         showSignUpComponent();
     });
+
+    $('#btnSignup').on('click', function() {
+        showCheckoutComponents();
+    });
+
     showHomeComponents();
 });

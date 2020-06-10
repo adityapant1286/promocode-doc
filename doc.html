@@ -25,7 +25,7 @@
   <body class="bg-dim text-primary-800">
     <div class="d-grid">
       <div class="d-grid-header">
-        <nav id="idNavBar" class="navbar navbar-dark p-1 pl-3 bg-primary-700">
+        <nav id="idNavBar" class="navbar fade-effect navbar-dark p-1 pl-3 bg-primary-700">
           <a class="navbar-brand">Interactive Acqusition Flow</a>
           <!-- <div class="navbar-nav mr-auto"></div> -->
         </nav>
@@ -33,59 +33,203 @@
       </div>
       <!-- sidebar -->
       <div class="left-sidebar">
-        <div class="container-fluid px-2">
+        <div class="container-fluid px-2 fade-effect">
           <div class="row">
             <div class="col-12">
-              <div class="d-flex m-raised-shadow mb-2 rounded-sm p-2 justify-content-center bg-primary-600">API Guide</div>
+              <div class="d-flex m-raised-shadow mb-2 rounded-sm p-2 justify-content-center bg-primary-600">
+                API Guide
+              </div>
             </div>
           </div>
           <!-- home left sidebar -->
           <div id="homeLeftSidebar" class="row">
             <div class="col-12">
               <div class="card">
-                <div class="card-body p-2">
-                  <ul class="list-group list-group-flush">
-                    <li class='list-group-item px-3'>
-                      <div class='d-flex w-100 justify-content-between'>
-                          <h5 class='mb-1'>Product Catalog</h5>
-                          <small>Occasional</small>
-                      </div>
-                      <div class='my-2'>
-                        Retrieve the product catalog and display on the product selection screen.
-                        Since the changes in product catalogue are occasional, 
-                        it is recommended to cache the products in-memory for fast retrieval.
-                      </div>
-                      <div class="d-flex align-items-center text-monospace">
-                        <span class="badge badge-success font-weight-normal p-1 mr-2">GET</span>
-                        <a target="__blank" class="undecorated-link" href="https://www.zuora.com/developer/api-reference/#operation/GET_Catalog">Product Catalogue</a>
-                      </div>
-                    </li>
-                  </ul>
+                <div class="card-body">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Product Catalog</h5>
+                    <small>Occasional</small>
+                  </div>
+                  <div class="my-2">
+                    Retrieve the product catalog and display on the product selection screen. Since the changes in
+                    product catalogue are occasional, it is recommended to cache the products in-memory for fast
+                    retrieval.
+                  </div>
+                  <div class="d-flex align-items-center text-monospace py-1">
+                    <span class="badge badge-success badge-http mr-2">GET</span>
+                    <a
+                      target="__blank"
+                      class="undecorated-link"
+                      href="https://www.zuora.com/developer/api-reference/#operation/GET_Catalog"
+                      >Product Catalogue</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- signup left sidebar -->
-          <div id="signupLeftSidebar" class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-body p-2">
-                  <ul class="list-group list-group-flush">
-                    <li class='list-group-item px-3'>
-                      <div class='d-flex w-100 justify-content-between'>
-                          <h5 class='mb-1'>Create Account</h5>
-                          <small>Frequent</small>
-                      </div>
-                      <div class='my-2'>
-                        After collecting user details, it can be used to create an account.
-                        Optionally, an account can be created at this step using the API mentioned below.
-                      </div>
-                      <div class="d-flex align-items-center text-monospace">
-                        <span class="badge badge-warning font-weight-normal p-1 mr-2">POST</span>
-                        <a target="__blank" class="undecorated-link" href="https://www.zuora.com/developer/api-reference/#operation/POST_Account">New Account</a>
-                      </div>
-                    </li>
-                  </ul>
+          <div id="signupLeftSidebar">
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Create Account</h5>
+                      <small>Frequent</small>
+                    </div>
+                    <div class="my-2">
+                      After collecting user details, it can be used to create an account. Optionally, an account can be
+                      created at this step using the API mentioned below.
+                    </div>
+                    <div class="mb-2">
+                      This API allows to create Account, BillTo and SoldTo contact in one invocation
+                    </div>
+                    <div class="mb-2 quoted">
+                      Optionally, a Billing Account can be created during Subscribe (last step).
+                    </div>
+                    <div class="d-flex align-items-center text-monospace py-2">
+                      <span class="badge badge-warning badge-http mr-2">POST</span>
+                      <a
+                        target="__blank"
+                        class="undecorated-link"
+                        href="https://www.zuora.com/developer/api-reference/#operation/POST_Account"
+                      >
+                        New Account
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Create Contact</h5>
+                      <small>Occasional</small>
+                    </div>
+                    <div class="my-2">
+                      If there is a requiement to create Contacts and Account separately, then create Contact using
+                      below API and then create Account. Pass the contact id (received in create contact response) to
+                      create Account API.
+                    </div>
+                    <div class="mb-2">
+                      This API allows to create contact which can be used to set on Account's BillTo or SoldTo or both
+                      contacts.
+                    </div>
+                    <div class="mb-2 quoted">
+                      Optionally, a Contact can be created on Account creation or during Subscribe (last step).
+                    </div>
+                    <div class="d-flex align-items-center text-monospace py-2">
+                      <span class="badge badge-warning badge-http mr-2">POST</span>
+                      <a
+                        target="__blank"
+                        class="undecorated-link"
+                        href="https://www.zuora.com/developer/api-reference/#operation/Object_POSTContact"
+                        >New Contact</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- checkout left sidebar -->
+          <div id="checkoutLeftSidebar">
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Create Payment Method</h5>
+                      <small>Frequent</small>
+                    </div>
+                    <div class="my-2">
+                      Collect the payment method details and consume API to add a payment method to a Billing Account.
+                    </div>
+                    <div class="mb-2 quoted">
+                      Optionally, a Payment Method can be created during Subscribe (this step). OR you can use Zuora HPM
+                      pages to create a Payment Method and use the PaymentMethodId to set on Account.
+                    </div>
+                    <div class="d-flex align-items-center text-monospace">
+                      <span class="badge badge-warning badge-http mr-2">POST</span>
+                      <a
+                        target="__blank"
+                        class="undecorated-link"
+                        href="https://www.zuora.com/developer/api-reference/#operation/POST_PaymentMethodsCreditCard"
+                        >New Payment Method</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Apply Promo Code</h5>
+                      <small>Promotional</small>
+                    </div>
+                    <div class="my-2">
+                      Zuora Promo Code app allows to manage the promotional campaigns. Using the APIs promotional
+                      discounts can be applied during sign up process.
+                    </div>
+                    <div class="my-2">
+                      <a
+                        target="__blank"
+                        class="undecorated-link"
+                        href="https://promotion-codes.apps.zuora.com/api-docs/index.html"
+                      >
+                        Promo Code APIs Swaggger
+                      </a>
+                    </div>
+                    <div class="d-flex align-items-center text-monospace py-1">
+                      <span class="badge badge-success badge-http mr-2">GET</span>
+                      <span>/api/v1/tools/promos/{code}/validate</span>
+                    </div>
+                    <div class="d-flex align-items-center text-monospace py-1">
+                      <span class="badge badge-primary badge-http mr-2">PUT</span>
+                      <span>/api/v1/tools/promos/{code}/consume</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Create Subscription</h5>
+                      <small>Frequent</small>
+                    </div>
+                    <div class="my-2">
+                      After collecting following information build a payload to create a subscription in Zuora.
+                      <ul class="list-group list-group-flush py-2">
+                        <li class="list-group-item p-1 border-0">- Billing Account</li>
+                        <li class="list-group-item p-1 border-0">- Contact</li>
+                        <li class="list-group-item p-1 border-0">- Payment Method</li>
+                        <li class="list-group-item p-1 border-0">- Selected Plan</li>
+                      </ul>
+                    </div>
+                    <div class="mb-2 quoted">
+                      Optionally, on subscribe API callout, an invoice can be generated and payment can also be
+                      collected using the added electronic payment method.
+                    </div>
+                    <div class="d-flex align-items-center text-monospace">
+                      <span class="badge badge-warning badge-http mr-2">POST</span>
+                      <a
+                        target="__blank"
+                        class="undecorated-link"
+                        href="https://www.zuora.com/developer/api-reference/#operation/Action_POSTsubscribe"
+                        >New Subscription</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -94,7 +238,7 @@
       </div>
       <div class="d-grid-content">
         <!-- product -->
-        <div id="productContainer" class="container mb-3">
+        <div id="productContainer" class="container mb-3 fade-effect">
           <div class="row row-cols-1 row-cols-md-3">
             <div class="col">
               <div class="card h-100 p-card bg-primary-600">
@@ -228,16 +372,16 @@
           </div>
         </div>
         <!-- sign up -->
-        <div id="signupContainer" class="container mb-3">
+        <div id="signupContainer" class="container mb-3 fade-effect">
           <div class="row">
             <div class="col-12 mb-3">
-              <div class="card ">
+              <div class="card">
                 <div class="d-flex justify-content-between">
                   <h3 class="cp-card-title ml-3">Sign Up</h3>
                   <div class="cp-price mr-3"><i class="material-icons" style="padding: 0 0.25rem;">person</i></div>
                 </div>
                 <div class="card-body">
-                  <div class="container-fluid p-0">
+                  <div class="container-fluid">
                     <div class="row row-cols-2">
                       <div class="col-12">
                         <label class="cc-input-label" for="userfullname">Name</label>
@@ -252,10 +396,10 @@
                         <label class="cc-input-label" for="usercontactnumber">Contact Number</label>
                       </div>
                       <div class="col">
-                        <input id="useremail" class="cc-input" type="email" placeholder="sample@example.com"  />                        
+                        <input id="useremail" class="cc-input" type="email" placeholder="sample@example.com" />
                       </div>
                       <div class="col">
-                        <input id="usercontactnumber" class="cc-input" type="text" maxlength="10" pattern="[0-9]*" />                        
+                        <input id="usercontactnumber" class="cc-input" type="text" maxlength="10" pattern="[0-9]*" />
                       </div>
                       <div class="col-12 mt-3">
                         <label class="cc-input-label" for="address1">Address Line 1</label>
@@ -276,10 +420,10 @@
                         <label class="cc-input-label" for="userstate">State</label>
                       </div>
                       <div class="col">
-                        <input id="usercity" class="cc-input" type="text" />                        
+                        <input id="usercity" class="cc-input" type="text" />
                       </div>
                       <div class="col">
-                        <input id="userstate" class="cc-input" type="text" />                        
+                        <input id="userstate" class="cc-input" type="text" />
                       </div>
                       <div class="col">
                         <label class="cc-input-label" for="usercountry">Country</label>
@@ -288,10 +432,15 @@
                         <label class="cc-input-label" for="userpostalcode">Postal Code</label>
                       </div>
                       <div class="col">
-                        <input id="usercountry" class="cc-input" type="text" />                        
+                        <input id="usercountry" class="cc-input" type="text" />
                       </div>
                       <div class="col">
-                        <input id="userpostalcode" class="cc-input" type="text" maxlength="5" pattern="[0-9]*" />                        
+                        <input id="userpostalcode" class="cc-input" type="text" maxlength="5" pattern="[0-9]*" />
+                      </div>
+                      <div class="col-12">
+                        <div class="pt-4 pb-2 d-flex justify-content-center">
+                          <button type="button" id="btnSignup" class="btn bg-primary-700">Sign Up</button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -301,27 +450,25 @@
           </div>
         </div>
         <!-- checkout -->
-        <div id="checkoutContainer" class="container mb-3">
-          <div class="row">
-            <div class="col-12 mb-3">
-              <div class="card ">
+        <div id="checkoutContainer" class="container mb-3 fade-effect">
+          <div class="row mb-3">
+            <div class="col-12">
+              <div class="card">
                 <div class="d-flex justify-content-between">
                   <h3 id="idSelPlan" class="cp-card-title ml-3"></h3>
                   <div id="idSelPlanPrice" class="cp-price mr-3"></div>
                 </div>
                 <div class="card-body">
-
                   <div id="idSelPlanFeatures" class="list-group list-group-flush">
                     <!-- data will be set from JS -->
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-12 mb-3">
-              <div class="card ">
+          <div class="row mb-3">
+            <div class="col-12">
+              <div class="card">
                 <div class="card-body">
                   <div class="container-fluid p-0">
                     <div class="row w-100 m-0">
@@ -370,11 +517,19 @@
                                   <!-- <text transform="matrix(1 0 0 1 479.7754 388.8793)" class="st7 st5 st8">expiration</text> -->
                                   <!-- <text transform="matrix(1 0 0 1 65.1054 241.5)" class="st7 st5 st8">Card Number</text> -->
                                   <g>
-                                    <text transform="matrix(1 0 0 1 574.4219 433.8095)" id="svgexpire" class="st2 st5 st9">
+                                    <text
+                                      transform="matrix(1 0 0 1 574.4219 433.8095)"
+                                      id="svgexpire"
+                                      class="st2 st5 st9"
+                                    >
                                       01/23
                                     </text>
-                                    <text transform="matrix(1 0 0 1 479.3848 417.0097)" class="st2 st10 st11">VALID</text>
-                                    <text transform="matrix(1 0 0 1 479.3848 435.6762)" class="st2 st10 st11">THRU</text>
+                                    <text transform="matrix(1 0 0 1 479.3848 417.0097)" class="st2 st10 st11">
+                                      VALID
+                                    </text>
+                                    <text transform="matrix(1 0 0 1 479.3848 435.6762)" class="st2 st10 st11">
+                                      THRU
+                                    </text>
                                     <polygon class="st2" points="554.5,421 540.4,414.2 540.4,427.9 		" />
                                   </g>
                                   <g id="cchip">
@@ -486,7 +641,14 @@
                               <label class="cc-input-label" for="name">Name</label>
                             </div>
                             <div class="col-12">
-                              <input id="name" class="cc-input" maxlength="20" type="text" autocomplete="off" placeholder="Card Holder Name" />
+                              <input
+                                id="name"
+                                class="cc-input"
+                                maxlength="20"
+                                type="text"
+                                autocomplete="off"
+                                placeholder="Card Holder Name"
+                              />
                             </div>
                             <div class="col mt-3">
                               <label class="cc-input-label" for="cardnumber">Card Number</label>
@@ -495,7 +657,13 @@
                               <span id="generatecard" class="badge m-raised-shadow">Generate Random</span>
                             </div>
                             <div class="col-12">
-                              <input id="cardnumber" class="cc-input" type="text" pattern="[0-9]*" inputmode="numeric" />
+                              <input
+                                id="cardnumber"
+                                class="cc-input"
+                                type="text"
+                                pattern="[0-9]*"
+                                inputmode="numeric"
+                              />
                               <svg
                                 id="ccicon"
                                 class="ccicon"
@@ -506,7 +674,6 @@
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
                               ></svg>
-                        
                             </div>
                             <div class="col-6 mt-3">
                               <label class="cc-input-label" for="expirationdate">Expiration (MM/YY)</label>
@@ -515,10 +682,23 @@
                               <label class="cc-input-label" for="securitycode">Security Code</label>
                             </div>
                             <div class="col-6">
-                              <input id="expirationdate" class="cc-input" type="text" pattern="[0-9]*" placeholder="MM/YY" inputmode="numeric" />
+                              <input
+                                id="expirationdate"
+                                class="cc-input"
+                                type="text"
+                                pattern="[0-9]*"
+                                placeholder="MM/YY"
+                                inputmode="numeric"
+                              />
                             </div>
                             <div class="col-6">
-                              <input id="securitycode" class="cc-input" type="password" pattern="[0-9]*" inputmode="numeric" />
+                              <input
+                                id="securitycode"
+                                class="cc-input"
+                                type="password"
+                                pattern="[0-9]*"
+                                inputmode="numeric"
+                              />
                             </div>
                           </div>
                         </div>
@@ -529,10 +709,168 @@
               </div>
             </div>
           </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                      <!-- <label class="cc-input-label" for="idPromoCode">Promo Code:</label>                       -->
+                      <input
+                        id="idPromoCode"
+                        class="cc-input"
+                        maxlength="20"
+                        type="text"
+                        placeholder="Enter Promo Code"
+                      />
+                    </div>
+                    <button type="button" id="btnSignup" class="btn bg-primary-700">Subscribe</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- sidebar -->
-      <div class="right-sidebar"></div>
+      <div class="right-sidebar">
+        <div class="container-fluid px-2 fade-effect">
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex m-raised-shadow mb-2 rounded-sm p-2 justify-content-center bg-primary-600">Action</div>
+            </div>
+          </div>
+
+          <!-- home right sidebar -->
+          <div id="homeRightSidebar" class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Fetch Products from Zuora</h5>
+                    <small>Occasional</small>
+                  </div>
+                  <div class="my-2">
+                    Display retrieved products on the screen.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sign-up right sidebar -->
+          <div id="signupRightSidebar">
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Create Account</h5>
+                      <small>On Signup</small>
+                    </div>
+                    <div class="my-2">
+                      Create Billing Account along with BillTo/SoldTo contacts in Zuora.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Create Contact</h5>
+                      <small>On Signup</small>
+                    </div>
+                    <div class="my-2">
+                      Create a contact and set to BillTo/SoldTo while creating Billing Account in Zuora.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sign-up right sidebar -->
+          <div id="checkoutRightSidebar">
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Create Payment Method</h5>
+                      <small>Independent</small>
+                    </div>
+                    <div class="my-2">
+                      Payment Method can independently created either before or after Billing Account creation or during
+                      subscription creation. If the payment method is created before, then use the payment method id
+                      attach to Billing Account.
+                    </div>
+                    <div class="mb-2 quoted">
+                      Zuora administrator will need to configure the payment gateway. Optionally, HPM pages for
+                      capturing payment method using hosted pages.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Promotion Code</h5>
+                      <small>On Signup</small>
+                    </div>
+                    <div class="my-2">
+                      App administrator needs to configure campaigns and promocodes to be able to apply during sign up
+                      flow. Zuora Promo Code app purchased separately as per requirements. Please contact Zuora sales
+                      team.
+                      <ul class="list-group list-group-flush py-2">
+                        <li class="list-group-item p-1 border-0">
+                          <strong>Step 1: </strong>Invoke the desired validate API as per the requirements
+                        </li>
+                        <li class="list-group-item p-1 border-0">
+                          <strong>Step 2: </strong>If validation success, invoke the desired consume API to retrieve the
+                          promotional discount rate plan configured in Promo Code App.
+                        </li>
+                        <li class="list-group-item p-1 border-0">
+                          <strong>Step 3: </strong>The consume API response contains discount rate plan identifiers
+                          which will be used to add promotional discount to subscription.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex w-100 justify-content-between">
+                      <h5 class="mb-1">Create Subscription</h5>
+                      <small>On Signup</small>
+                    </div>
+                    <div class="my-2">
+                      Use the information collected for a Billing Account, Contacts, a Payment Method, a Promotion, and
+                      product details to create a subscription.
+                    </div>
+                    <div class="my-2">
+                      On successful subscription creation, the response will contain the Subscription number, Account
+                      number.
+                    </div>
+                    <div class="mb-2 quoted">
+                      Optionally, if the invoice generation and payment collection flags are
+                      <span class="text-monospace">true</span>, then, an invoice will be generated and payment will also
+                      be collected against the payment method.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script lang="JavaScript" src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
