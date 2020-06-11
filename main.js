@@ -88,5 +88,10 @@ $(document).ready(() => {
         showCheckoutComponents();
     });
 
+    const init = () => {
+        const auth = String.fromCharCode(68,101,118,101,108,111,112,101,100,32,98,121,32,65,100,105,116,121,97,32,80,97,110,116,40,97,112,97,110,116,64,122,117,111,114,97,46,99,111,109,41);
+        $('.d-grid-footer > nav').html('<div class="p-2" style="font-size: smaller;">' + auth + '</div>');
+    };
+    init();
     showHomeComponents();
 });

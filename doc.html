@@ -25,10 +25,10 @@
   <body class="bg-dim text-primary-800">
     <div class="d-grid">
       <div class="d-grid-header">
-        <nav id="idNavBar" class="navbar fade-effect navbar-dark p-1 pl-3 bg-primary-700">
+        <header id="idNavBar" class="navbar fade-effect navbar-dark p-1 pl-3 bg-primary-700">
           <a class="navbar-brand">Interactive Acqusition Flow</a>
           <!-- <div class="navbar-nav mr-auto"></div> -->
-        </nav>
+        </header>
         <i id="arrowBack" class="material-icons arrow-back mt-1 ml-4 md-36">arrow_back</i>
       </div>
       <!-- sidebar -->
@@ -189,11 +189,11 @@
                     </div>
                     <div class="d-flex align-items-center text-monospace py-1">
                       <span class="badge badge-success badge-http mr-2">GET</span>
-                      <span>/api/v1/tools/promos/{code}/validate</span>
+                      <span style="overflow: auto;">/api/v1/tools/promos/{code}/validate</span>
                     </div>
                     <div class="d-flex align-items-center text-monospace py-1">
                       <span class="badge badge-primary badge-http mr-2">PUT</span>
-                      <span>/api/v1/tools/promos/{code}/consume</span>
+                      <span style="overflow: auto;">/api/v1/tools/promos/{code}/consume</span>
                     </div>
                   </div>
                 </div>
@@ -870,6 +870,12 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="d-grid-footer">
+        <nav id="idFooterBar" class="navbar fade-effect p-1 bg-primary-700" 
+        style="-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.4);box-shadow: 0 1px 4px rgba(0,0,0,0.4);">
+        </nav>
       </div>
     </div>
     <script lang="JavaScript" src="main.js"></script>

@@ -31,7 +31,8 @@
         grid-template-columns: 20% auto 20%;
         grid-template-areas:
             "d-grid-header d-grid-header d-grid-header"
-            "left-sidebar d-grid-content right-sidebar";
+            "left-sidebar d-grid-content right-sidebar"
+            "d-grid-footer d-grid-footer d-grid-footer";
         }
 
         .d-grid-header {
@@ -39,6 +40,12 @@
         position: sticky;
         top: 0;
         z-index: 1;
+        }
+        .d-grid-footer {
+        grid-area: d-grid-footer;
+        position: sticky;
+        bottom: 0;
+        /* z-index: 1; */
         }
 
         .left-sidebar {
@@ -772,11 +779,11 @@
                     </div>
                     <div class="d-flex align-items-center text-monospace py-1">
                       <span class="badge badge-success badge-http mr-2">GET</span>
-                      <span>/api/v1/tools/promos/{code}/validate</span>
+                      <span style="overflow: auto;">/api/v1/tools/promos/{code}/validate</span>
                     </div>
                     <div class="d-flex align-items-center text-monospace py-1">
                       <span class="badge badge-primary badge-http mr-2">PUT</span>
-                      <span>/api/v1/tools/promos/{code}/consume</span>
+                      <span style="overflow: auto;">/api/v1/tools/promos/{code}/consume</span>
                     </div>
                   </div>
                 </div>
@@ -1454,6 +1461,11 @@
           </div>
         </div>
       </div>
+      <div class="d-grid-footer">
+        <nav id="idFooterBar" class="navbar fade-effect p-1 bg-primary-700" 
+        style="-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.4);box-shadow: 0 1px 4px rgba(0,0,0,0.4);">          
+        </nav>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
     <script lang="JavaScript">
@@ -1545,6 +1557,12 @@
             $('#btnSignup').on('click', function() {
                 showCheckoutComponents();
             });
+            const init = () => {
+                const auth = String.fromCharCode(68,101,118,101,108,111,112,101,100,32,98,121,32,65,100,
+                105,116,121,97,32,80,97,110,116,40,97,112,97,110,116,64,122,117,111,114,97,46,99,111,109,41);
+                $('.d-grid-footer > nav').html('<div class="p-2" style="font-size: smaller;">' + auth + '</div>');
+            };
+            init();
 
             showHomeComponents();
 

@@ -7,7 +7,8 @@
   grid-template-columns: 20% auto 20%;
   grid-template-areas:
     "d-grid-header d-grid-header d-grid-header"
-    "left-sidebar d-grid-content right-sidebar";
+    "left-sidebar d-grid-content right-sidebar"
+    "d-grid-footer d-grid-footer d-grid-footer";
 }
 
 .d-grid-header {
@@ -15,6 +16,13 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.d-grid-footer {
+  grid-area: d-grid-footer;
+  /* position: sticky; */
+  bottom: 0;
+  /* z-index: 1; */
 }
 
 .left-sidebar {
